@@ -189,34 +189,7 @@ netgroup:       nis
 
 This means your Time Machine drive will show up in Finder’s sidebar.
 
-Next edit `afpd.service`
-
-```
-$ sudo nano /etc/avahi/services/afpd.service
-```
-
-Paste into `afpd.service`
-
-```
-<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
-<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-<service-group>
-    <name replace-wildcards="yes">%h</name>
-    <service>
-        <type>_afpovertcp._tcp</type>
-        <port>548</port>
-    </service>
-    <service>
-        <type>_device-info._tcp</type>
-        <port>0</port>
-        <txt-record>model=TimeCapsule</txt-record>
-    </service>
-</service-group>
-```
-
-This make Pi mimic Apples Time machine.
-
-Set up `afp.conf`
+Next set up `afp.conf`
 
 ```
 $ sudo nano /usr/local/etc/afp.conf
