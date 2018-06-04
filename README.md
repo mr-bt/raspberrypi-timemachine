@@ -1,6 +1,4 @@
-# 使用树莓派搭建 Time Machine 的正确姿势
-
-群晖太贵了！若是不介意 USB 2.0 和 100 Mbps 带宽的话，用树莓派 + 移动硬盘做个低功耗小型 NAS 也是不错的选择，搭建 Samba 的教程到处都是，本篇将介绍如何以正确的姿势搭建 AFP 共享 + Time Machine。
+# Apple Time machine on RaspberryPI
 
 The following step are the ones that enable Time Machine backups with Raspberry Pi plus a bit of polishing to my taste.
 
